@@ -247,6 +247,21 @@
 /* ---------- Footer ---------- */
 .cl-footer{margin-top:12px!important;font-size:var(--cl-fs-micro);color:var(--cl-mute);line-height:1.5}
  
+/* ---------- Screen-reader title ---------- */
+.cl-sr{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;margin:0;padding:0}
+ 
+/* ---------- List view (many accounts) ---------- */
+.cl-list-row{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(0,.8fr) minmax(0,.7fr) 90px minmax(0,1.6fr) 150px;
+  gap:10px;align-items:center;padding:8px 0;border-top:1px solid var(--cl-line);font-size:var(--cl-fs-detail)}
+.cl-list-head{font-size:var(--cl-fs-micro);color:var(--cl-mute);border-top:none;padding:2px 0 4px}
+.cl-list-co{display:flex;gap:8px;align-items:center;min-width:0}
+.cl-logo--sm{width:28px;height:28px;border-radius:6px;font-size:10px}
+.cl-logo--sm img{max-width:24px;max-height:24px}
+.cl-list-pills{display:flex;gap:4px;margin-top:2px;flex-wrap:wrap}
+.cl-list-row .cl-due{margin-left:6px}
+.cl-list-act{display:flex;gap:4px;justify-content:flex-end}
+.cl-list-row .cl-bant-letter:first-child{margin-left:0}
+ 
 /* ---------- Narrow screens ---------- */
 @media (max-width:560px){
   .cl-tiles{grid-template-columns:repeat(2,minmax(0,1fr))}
@@ -257,6 +272,7 @@
   .cl-contact{grid-template-columns:1fr auto}
   .cl-contact > :nth-child(2){grid-column:1 / -1;order:3}
   .cl-mt{overflow-x:auto}
+  .cl-list-head{display:none}
+  .cl-list-row{grid-template-columns:1fr auto}
+  .cl-list-row > :nth-child(n+2):not(.cl-list-act){grid-column:1 / -1}
 }
- 
-Claude finished the response
