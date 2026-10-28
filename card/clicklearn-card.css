@@ -79,13 +79,17 @@
 .cl-muted{color:var(--cl-mute)}
 .cl-sub{color:var(--cl-sub)}
 .cl-card svg.lucide{width:13px;height:13px;vertical-align:-2px;stroke-width:2}
+.cl-card svg.cl-ico{width:13px;height:13px;flex:none}
  
 /* ---------- Header ---------- */
 .cl-header{display:flex;gap:12px;align-items:center;flex-wrap:wrap}
 .cl-logo{width:52px;height:52px;flex:none;border-radius:10px;border:1px solid var(--cl-line);background:#fff;
   display:flex;align-items:center;justify-content:center;overflow:hidden;
   font-family:var(--cl-font-head);font-weight:700;font-size:15px;color:var(--cl-950)}
+.cl-logo{position:relative}
 .cl-logo img{max-width:44px;max-height:44px}
+/* Logo overlay: filled by logos/<HubSpot company ID>.css from the clicklearn-logos repo; empty = initials show */
+.cl-logo-img{position:absolute;inset:0;border-radius:inherit;pointer-events:none}
 .cl-header-main{flex:1;min-width:200px}
 .cl-titlerow{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
 .cl-title{font-family:var(--cl-font-head);font-size:var(--cl-fs-title);font-weight:700;line-height:1.2}
